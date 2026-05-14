@@ -60,6 +60,17 @@ export default function Navbar() {
                     </div>
                 </Link>
 
+                <div className="hide-mobile" style={{ display: 'flex', gap: '20px', marginLeft: '20px' }}>
+                    <Link href="/support" style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-light)', textDecoration: 'none' }} 
+                        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-light)'}
+                    >Support</Link>
+                    <Link href="/about" style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-light)', textDecoration: 'none' }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-light)'}
+                    >About</Link>
+                </div>
+
                 <form onSubmit={handleSearch} style={{ flex: 1, maxWidth: '480px', position: 'relative' }} className="search-desktop">
                     <input type="text" placeholder="Search fresh vegetables..." value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}

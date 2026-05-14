@@ -94,7 +94,7 @@ export default function Footer() {
                             Quick Links
                         </h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                            {['Home', 'Products', 'Cart', 'Orders'].map(link => (
+                             {['Home', 'Products', 'About', 'Contact', 'Support'].map(link => (
                                 <Link
                                     key={link}
                                     href={link === 'Home' ? '/' : link === 'Products' ? '/?category=all' : `/${link.toLowerCase()}`}
@@ -197,6 +197,11 @@ export default function Footer() {
                     color: 'rgba(255,255,255,0.4)',
                     fontSize: '0.85rem',
                 }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '24px', flexWrap: 'wrap' }}>
+                        <Link href="/privacy" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Privacy Policy</Link>
+                        <Link href="/terms" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Terms & Conditions</Link>
+                        <Link href="/support" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Help Center</Link>
+                    </div>
                     <p>© 2026 VegFresh. All rights reserved. Made with 💚 for healthy living.</p>
                 </div>
             </div>
